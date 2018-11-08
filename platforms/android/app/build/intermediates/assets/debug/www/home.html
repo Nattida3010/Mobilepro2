@@ -56,7 +56,7 @@
       <ons-page>  
       <ons-toolbar style="background-color:#5F9EA0;color:#F2BEBC;" >
             <div class="left">
-              <ons-icon class="toolbaricon" size="30px" icon="fa-shopping-bag" onchange="search(this.value)" onfocus ="this.value =''">
+              <ons-icon class="toolbaricon" size="30px" icon="fa-shopping-bag" >
               </ons-icon>
             </div>
             <div class="center" id="appname">#</div>
@@ -265,11 +265,11 @@
            console.log('itemrrrrrrrrrrrr');
           // get data for all product screen  
           if (name1 == null&&item==null) {
-            console.log('yyyyyyyyyyyyyyyyyyyyy',name1)
+            console.log('testname 1',name1)
             getproductData();
           }
           else  if (name1 != null&&item==null){
-            console.log("frfffffff")
+            console.log("testname 2")
             getproductData(name1);
           }
           else{
