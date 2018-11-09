@@ -44,19 +44,20 @@
 .toast {
   background-color: #E9967A;
 }
+
     
        </style>
          
   </head>
   
-  
+  -
   <body>
     
     <ons-navigator swipeable id="myNavigator">
       <ons-page>  
       <ons-toolbar style="background-color:#5F9EA0;color:#F2BEBC;" >
             <div class="left">
-              <ons-icon class="toolbaricon" size="30px" icon="fa-shopping-bag" >
+              <ons-icon class="toolbaricon" size="30px" icon="md-camera" onclick="window.location.href='scan.html'"  onchange="scanQR()"</ons-icon> 
               </ons-icon>
             </div>
             <div class="center" id="appname">#</div>
@@ -460,6 +461,7 @@ console.log("test2",title);
  function scanQR(){
       window.location.href = 'scan.html'
     }
+    
   </script>
   </body>
   
