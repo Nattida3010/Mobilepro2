@@ -282,6 +282,9 @@
   
   
       function getHomeData() {
+     var code = localStorage.getItem("code");
+     if (code == null){
+
      
           var docRef = db.collection("UI").doc("home");
           docRef.get().then(function (doc) {
@@ -306,7 +309,12 @@
           }).catch(function (error) {
             console.log("Error getting document:", error);
           });
+  }else{
+    myNavigator.pushPage('detailP.html');
+    showDetailP();
+     
   
+  }
   
      
       }
@@ -359,15 +367,23 @@
       }
   
   function showDetailP() {
+    var code = localStorage.getItem("code");
+    if(code == null ){
+
       var dataproduct = localStorage.getItem('getDep');
+    }else{
+      var dataproduct = localStorage.getItem(code);
+    }
+      
       var apr = db.collection("PRODUCTS").where("title", "==", dataproduct);
       apr.get().then(function (querySnapshot) {
         var Detailproduct_template = $('#Detailproduct_template').html();
         var html = ejs.render(Detailproduct_template, { dataDep: querySnapshot.docs });
         $('#showDep').html(html);
       })
-  
+  localStorage.clear("code");
     }
+
   
   
       

@@ -23,6 +23,7 @@ function displayContents(err, text){
   } else {
     // The scan completed, display the contents of the QR code:
     localStorage.setItem("code", text);
+    
     QRScanner.hide();
     window.location.href = 'index.html';
 

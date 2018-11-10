@@ -1,4 +1,4 @@
-#Fri Nov 09 18:11:34 ICT 2018
-base.0=D\:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Sat Nov 10 21:42:26 ICT 2018
+base.0=D\:\\Mibileproject2\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

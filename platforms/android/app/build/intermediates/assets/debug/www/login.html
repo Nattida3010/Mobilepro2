@@ -8,8 +8,12 @@
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="ejs.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="cordova.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script>
     // Initialize Firebase
     var config = {
@@ -20,11 +24,133 @@
     firebase.initializeApp(config);
 
   </script>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/* style the submit button */
+.signin{
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+.signup{
+  background-color: rgb(68, 104, 204);
+  color: white;
+  cursor: pointer;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+
+
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+</style>
 </head>
 
 <body>
-  <ons-page>
+  
+  <!-- <ons-page>
     <div style="text-align: center; margin-top: 30px;">
       <p>
         <ons-input id="username" modifier="underbar" placeholder="Username" float></ons-input>
@@ -45,7 +171,53 @@
         <a href="regis.html">Sign up for a new user</a>
       </p>
     </div>
-  </ons-page>
+  </ons-page> -->
+  <ons-page>
+    
+    
+ 
+<div class="container" style="text-align: center" style="margin-top: 80px;" >
+  <form >
+    <div class="row">
+      <h2 style="text-align:center">Login with Social Media or Manually</h2>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <a   onclick="facebook()"   class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> <center>Login with Facebook</center>
+         </a>
+      
+        <a  onclick="google()"  class="google btn"><i class="fa fa-google fa-fw">
+          </i> <center>Login with Google+</center>
+        </a>
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+
+        <input  id="username" modifier="underbar" placeholder="Username" required>
+        <input id="password" modifier="underbar" type="password" placeholder="Password"  required>
+        <ons-button class="signin btn" id="signin" onclick="signin()"><center>Sign in</center></ons-button>
+        
+      </div>
+      
+    </div>
+  </form>
+</div>
+
+    <div class="row">
+      <div class="col">
+          <ons-button class="signup btn"  onclick="window.location.href='regis.html'" style="color:white" class="btn"><center>Sign up</center></ons-button>
+      </div>
+     
+    </div>
+
+  
+</ons-page> 
 
 
 
@@ -100,7 +272,7 @@
       // ...
     });
   }
-  var login = function () {
+  var signin = function () {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
 
