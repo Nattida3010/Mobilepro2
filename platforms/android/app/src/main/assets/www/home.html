@@ -190,7 +190,7 @@
     <template id="detailP.html">
         <ons-page>
             <ons-toolbar>
-                <div class="left"><ons-back-button>Back</ons-back-button></div>
+                <div class="left" onclick="getHomeData()"><ons-back-button>Back</ons-back-button></div>
                 <div class="center">Detail product</div>
               </ons-toolbar>
           <script>
@@ -368,11 +368,12 @@
   
   function showDetailP() {
     var code = localStorage.getItem("code");
+
     if(code == null ){
 
       var dataproduct = localStorage.getItem('getDep');
-    }else{
-      var dataproduct = localStorage.getItem(code);
+    }else if (code != null){
+      var dataproduct = localStorage.getItem("code");
     }
       
       var apr = db.collection("PRODUCTS").where("title", "==", dataproduct);
