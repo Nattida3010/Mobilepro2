@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "547446947132",
+    "firebase_url": "https://shopee-se010.firebaseio.com",
+    "project_id": "shopee-se010",
+    "storage_bucket": "shopee-se010.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547446947132:android:62ae5fba2837a625",
+        "android_client_info": {
+          "package_name": "com.psu.shopeese010"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547446947132-ehlvdjf5elmk9k24ourvlmg4i5s1cnuh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt0ootWyBk4mzwpOIncCP5HjxpeUo0qGo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547446947132:android:0b3d6e291b1dedce",
+        "android_client_info": {
+          "package_name": "com.puinun.hello"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547446947132-ehlvdjf5elmk9k24ourvlmg4i5s1cnuh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt0ootWyBk4mzwpOIncCP5HjxpeUo0qGo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
