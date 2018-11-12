@@ -1,4 +1,4 @@
-#Sun Nov 11 18:20:27 ICT 2018
+#Mon Nov 12 15:18:06 ICT 2018
 base.0=D\:\\Mibileproject2\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex
